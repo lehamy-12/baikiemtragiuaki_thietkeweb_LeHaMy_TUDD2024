@@ -1,0 +1,241 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 20px;
+    padding: 0;
+    font-size: 16px;
+}
+.nav{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows:60px;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo img{
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;    
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+}
+.tk{
+   display: flex;
+   align-items: center;
+}
+.tk input{
+     padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px
+}
+.catelog img{
+    width: 100%;
+}
+.gt h1{
+    text-align: center;
+}
+.khungsp{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 40px;
+    overflow-y: scroll;
+}
+.sp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.sp img{
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+   
+    
+}
+.chan{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.chan p{
+    color: red;
+    font-weight: bold;
+}
+.footer{
+    margin-top: 10px;
+    width: 100%;
+ 
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px  solid rgb(175, 175, 175);
+}
+.footer p{
+    font-style: italic;
+    color: rgb(48, 48, 47);
+
+}
+.catelog img{
+    width: 100%; /* Giữ nguyên chiều rộng 100% */
+    border-top-left-radius:150px;
+    border-bottom-right-radius: 150px;
+}
+.hamburget {
+    display: none;
+    cursor: pointer; /* Thêm hiệu ứng trỏ chuột */
+}
+#check {
+    display: none;
+}
+@media (max-width:1200px){
+    .menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items:flex-start  ;
+        z-index: 100;
+        font-size: 16px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color:#FFFFFF;
+
+    }
+    .menu a{
+        margin-left: 80px;
+        margin-bottom: 10px;
+        margin-top: 18px;
+        font-size: 10px;
+    }
+    .timkiem{
+        display: none;
+    }
+    .nav{
+        display: grid;
+        grid-template-areas: "hamburget logo";
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows: auto;
+        text-align: center;
+    }
+    .menu {display: none;}
+    #check:checked ~ .menu {
+        display: flex;
+    }
+    .hamburget{
+        display: grid;
+        grid-area:hamburget;
+        display: block;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        padding-top: 60px;
+        padding-top: 20px; /* Giảm padding để hamburger không bị vướng */
+         z-index: 101; 
+         margin-top: 20px;
+    }
+    .logo{
+        display: grid;
+        grid-area:logo;
+        z-index: 10002;
+    }
+    .catelog{
+    display: none;
+
+     }
+.tk{
+    display: none;
+}
+.khungsp{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-y: scroll;
+}
+.gt{
+    font-size: 16px;
+}
+p{font-size: 14px;}
+}
+@media(max-width:600px){
+.menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items:flex-start  ;
+        z-index: 100;
+        font-size: 14px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color:#FFFFFF;
+
+    }
+    .menu a{
+        margin-left: 80px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        font-size: 10px;
+    }
+    .timkiem{
+        display: none;
+    }
+    .nav{
+        display: grid;
+        grid-template-areas: "hamburget logo";
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows: auto;
+        text-align: center;
+    }
+    .menu {display: none;}
+    #check:checked ~ .menu {
+        display: flex;
+    }
+    .hamburget{
+        display: grid;
+        grid-area:hamburget;
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        padding-top: 60px;
+        padding-top: 20px; /* Giảm padding để hamburger không bị vướng */
+         z-index: 101; 
+         margin-top: 20px;
+         font-weight: bold;
+    }
+    .logo{
+        display: grid;
+        grid-area:logo;
+        z-index: 10002;
+    }
+    .catelog{
+    display: none;
+
+     }
+.tk{
+    display: none;
+}
+.khungsp{
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+}
+.gt{
+    font-size: 14px;
+}
+p{font-size: 12px;}
+}
